@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <!---google font--->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <title>Glow Beauty Collective</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="skincosmetic.css" />
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+    <!-- Link to Friconix Icons CDN -->
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+  </head>
+  <body>
+    <!---nav/start of upper part of website--->
+    <nav>
+      <div class="logo">
+        <a href="index.html" class="logo">
+          <img
+            src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/LOGO.png?v=1732427180481"
+            alt="Glow Beauty Collective Logo"
+            width="150"
+          />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#product">Best Sellers</a></li>
+        <li><a href="skincare.html">Skincare</a></li>
+        <li><a href="cosmetics.html">Cosmetics</a></li>
+        <li><a href="quiz.html">Beauty Quiz</a></li>
+        <li><a href="https://confused-wry-tempo.glitch.me">About Us</a></li>
+      </ul>
+      <div class="cart">
+        <a href="cart.html"><i class="cart-icon">🛒</i></a>
+        <span class="cart-count">0</span>
+      </div>
+      <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <!-- END OF NAVBAR ---->
+
+    <!-- Search Bar -->
+    <div class="search-bar">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Search ..."
+        oninput="searchProducts()"
+      />
+    </div>
+
+    <style>
+      .search-bar {
+        position: absolute;
+        top: 120px; /* Keep it below the navbar */
+        left: 90%; /* Move it further to the right */
+        transform: translateX(-50%); /* Adjust for alignment */
+        max-width: 400px; /* Ensure it doesn't become too wide */
+        text-align: center;
+        z-index: 10; /* Keep it above other elements */
+      }
+
+      .search-bar input {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ff99cc;
+        border-radius: 5px;
+        outline: none;
+      }
+    </style>
+
+    <script>
+      function searchProducts() {
+        const input = document
+          .getElementById("searchInput")
+          .value.toLowerCase();
+        const productContainer = document.getElementById("productContainer");
+        productContainer.innerHTML = ""; // Clear current products
+
+        const filteredProducts = products.filter((product) =>
+          product.title.toLowerCase().includes(input)
+        );
+
+        if (filteredProducts.length > 0) {
+          filteredProducts.forEach((product) => {
+            const productDiv = document.createElement("div");
+            productDiv.className = "product";
+            productDiv.innerHTML = `
+          <div style="position: relative;">
+            <img src="${product.image}" alt="${product.title}">
+            <img src="${product.hoverImage}" alt="${product.title}" class="hover-img">
+          </div>
+          <h3>${product.title}</h3>
+          <p>${product.description}</p>
+          <a href="glowhighlighter.html"><button onclick="addToCart(${product.id})">Add to Cart</button></a>
+        `;
+            productContainer.appendChild(productDiv);
+          });
+        } else {
+          productContainer.innerHTML =
+            '<p style="text-align: center; color: #333;">No products found.</p>';
+        }
+      }
+    </script>
+
+    <!----START OF PRODUCTS---->
+
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>trial</title>
+        <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #ffe6f0;
+            color: #333;
+          }
+
+          .header {
+            background-color: #ff99cc;
+            padding: 10px 20px;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+          }
+
+          .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); /* 4 columns */
+            gap: 15px;
+            padding: 38px; /***adjusts this so that it isnt bloicked by nav***/
+            margin-top: calc(10px + 60px); /* Adjust this for navbar height */
+          }
+
+          .product {
+            background: white;
+            border: 2px solid #ff99cc;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+          }
+
+          .product img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            transition: opacity 0.5s ease;
+            position: relative;
+             height:220px;
+            width: 220px;
+            overflow: hidden;
+            object-fit: cover;
+          }
+
+          .product img.hover-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+             height:220px;
+            width: 220px;
+            overflow: hidden;
+            object-fit: cover;
+          }
+
+          .product:hover img {
+            opacity: 0;
+             height:220px;
+            width: 220px;
+            overflow: hidden;
+            object-fit: cover;
+          }
+
+          .product:hover img.hover-img {
+            opacity: 1;
+             height:220px;
+            width: 220px;
+            overflow: hidden;
+            object-fit: cover;
+          }
+
+          .product h3 {
+            font-size: 18px;
+            margin: 10px 0;
+          }
+
+          .product p {
+            font-size: 14px;
+            margin: 10px 0;
+          }
+
+          .product button {
+            background-color: #ff99cc;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+          }
+
+          .product button:hover {
+            background-color: #ff66b2;
+          }
+
+          .cart-icon {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #ff99cc;
+            color: white;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          }
+
+          .cart-icon span {
+            font-size: 14px;
+            margin-left: 5px;
+          }
+        </style>
+      </head>
+      <body>
+        <div class="container" id="productContainer">
+          <!-- Products will be rendered here -->
+        </div>
+
+        <div class="cart-icon" id="cartIcon">
+          🛒<span id="cartCount">0</span>
+        </div>
+
+        <script>
+          const products = [
+            {
+              id: 1,
+              title: "Luminous Glow Highlighter",
+              description:
+                "Elevate your beauty routine with the Luminous Glow Highlighter – the perfect touch for radiant, glowing skin.",
+              image:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/51q4yMB00ZL.jpg?v=1733888638120",
+              hoverImage:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/GN8040_GrandePOP_FrenchPearl_09.gif?v=1733888653536",
+              price: "$10",
+            },
+            {
+              id: 2,
+              title: "Bloom Blush",
+              description:
+                "Bloom & Glow Blush enhances your cheeks with a natural, radiant glow, made with eco-friendly ingredients and sustainable packaging.",
+              image:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/pink_ora_box.png.webp?v=1733888983271",
+              hoverImage:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/ezgif-3-ab5140b27e.gif?v=1733889270601",
+              price: "$15",
+            },
+            {
+              id: 3,
+              title: "LustreGlow Lipstick",
+              description:
+                "Complete your look with LustreGlow Lipstick – the perfect pop of color for soft, luminous lips.",
+              image:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/2619368.avif?v=1733889468638",
+              hoverImage:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/ezgif-6-a05110e5be.gif?v=1733889766363",
+              price: "$20",
+            },
+            {
+              id: 4,
+              title: "Bright Eyes Glow Palette",
+              description:
+                "The Bright Eyes Glow Palette features a collection of shimmering, buildable eyeshadows that create radiant, glowing eye looks for every occasion.",
+              image:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/RoseEyeshadowPalette-2.jpg.webp?v=1733949643486",
+              hoverImage:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/ezgif-5-2b73a0379f.gif?v=1733949595107",
+              price: "$25",
+            },
+            {
+              id: 5,
+              title: "Unicorn Glow Foundation",
+              description:
+                "A buildable, radiant foundation that evens out your complexion and provides a natural, glowing finish. ",
+              image:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/prd-ls2-797624-600x600.jpg?v=1733290189887",
+              hoverImage:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/foundation.gif?v=1733988334368",
+              price: "$21",
+            },
+            {
+              id: 6,
+              title: "GlowPerfect Concealer",
+              description:
+                "Illuminate your skin with GlowPerfect Concealer, a creamy, buildable formula that effortlessly covers dark circles, blemishes, and imperfection, leaving you with a flawless, radiant finish.",
+              image:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/glow%20conceal.jpg?v=1733988098818",
+              hoverImage:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/concealer%20igf.gif?v=1733988263645",
+              price: "$18",
+            },
+            {
+              id: 7,
+              title: "Radiance Setting Spray",
+              description:
+                "Lock in your flawless look with Radiance Setting Spray, a lightweight, hydrating mist that refreshes, controls shine, and provides a dewy, radiant finish to keep your makeup flawless all day.",
+              image:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/31yOErjMQVL.jpg?v=1733978973764",
+              hoverImage:
+                "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/ezgif-6-4ea9bb5ee5-2.webp?v=1733979229835",
+              price: "$8",
+            },
+            {
+              id: 8,
+              title: "Golden Illusion Palette",
+              description:
+                "The Golden Illusion Eyeshadow Palette features a stunning range of rich, shimmering shades, perfect for creating bold or subtle eye looks. With buttery smooth textures and long-lasting color, this palette adds a touch of luxury and glamour to your makeup collection.",
+              image: "https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/13187374-2134895420964897.jpg?v=1733294406337",
+              hoverImage: "https://cdn.glitch.me/71b52568-f61b-49cb-92d1-327ec066a966/16268877-hd_1080_1920_25fps-ezgif.com-video-to-gif-converter.gif?v=1733294944777",
+              price: "$32",
+            },
+          ];
+
+          const productContainer = document.getElementById("productContainer");
+          const cartIcon = document.getElementById("cartIcon");
+          const cartCount = document.getElementById("cartCount");
+
+          let cartItemCount = 0;
+
+          function renderProducts() {
+            products.forEach((product) => {
+              const productDiv = document.createElement("div");
+              productDiv.className = "product";
+              productDiv.innerHTML = `
+                    <div style="position: relative;">
+                        <img src="${product.image}" alt="${product.title}">
+                        <img src="${product.hoverImage}" alt="${product.title}" class="hover-img">
+                    </div>
+                    <h3>${product.title}</h3>
+                    <p>${product.description}</p>
+                    <a href="glowhighlighter.html"><button onclick="addToCart(${product.id})">Add to Cart</button></a>
+                `;
+              productContainer.appendChild(productDiv);
+            });
+          }
+
+          function addToCart(productId) {
+            const product = products.find((p) => p.id === productId);
+
+            if (!product) return;
+
+            cartItemCount++;
+            cartCount.textContent = cartItemCount;
+          }
+
+          renderProducts();
+        </script>
+      </body>
+    </html>
+    <!----- END OF PRODUCTS---->
+
+    <!--ABOUT US-->
+    <div class="about us"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="https://instagram.com" target="_blank" class="social-icon">
+            <i class="fi-xnsuxl-instagram"></i>
+            <span>@glowbeautycollective</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="social-icon">
+            <i class="fi-xnsuxl-twitter-solid"></i>
+            <span>GBCollective</span>
+          </a>
+          <a href="https://gmail.com" target="_blank" class="social-icon">
+            <i class="fi-xwsuxl-envelope-solid"></i>
+            <span>info@glowbeautycollective.com</span>
+          </a>
+          <a href="https://googlemaps.com" target="_blank" class="social-icon">
+            <i class="fi-xnluxl-building"></i>
+            <span>234 Radiance Blvd., Fashion District, USA 10010</span>
+          </a>
+        </div>
+
+        <!-- Email Subscription Form -->
+        <div class="subscribe-section">
+          <h3>Subscribe to Our Newsletter and for 15% off your next order!</h3>
+          <form action="#" method="post" class="subscribe-form">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <p>
+          By submitting this form, I confirm I am a US resident and (1) agree to
+          Glow Beauty Collective’s Terms of Use (which includes an arbitration
+          provision) and Marketing Disclosure; and (2) have read and acknowledge
+          Glow Beauty Collective’s Privacy Notice and Notice of Financial
+          Incentives.
+        </p>
+        <p>&copy; 2024 Glow Beauty Collective. All rights reserved.</p>
+      </div>
+    </footer>
+    <!----HEADER JAVASCRIPT ---->
+    <script src="header.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,925 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+/* logo*/ 
+.logo {
+  display: flex;
+  width: 200px;
+  height: 100px;
+}
+.logo img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  margin: auto;
+  transform: scale(150%) /*adjust size of logo img*/ 
+}
+
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 8vh;
+    background-color: ivory;
+    padding: 0 2rem;
+    position: fixed; /* Fix the navbar at the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it appears above other elements */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+
+
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  justify-content: space-around; /* Distribute links evenly */
+  align-items: center;
+  list-style: none;
+  transition: transform 0.5s ease-in-out;
+  flex-grow: 1; /* Ensure it takes up available space */
+}
+
+.nav-links li {
+  list-style: none;
+}
+
+.nav-links a {
+  color: pink;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff1493; /* Slightly brighter pink on hover */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header section */
+
+
+
+
+a.active{
+    background: #14ff72cb;
+    border-radius: 2px;
+}
+
+
+
+/* Header section */
+
+
+
+/* carousel */
+.carousel-container {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.carousel {
+    width: 100vw;
+    height: 100vh;
+    margin-top: 8vh; /* Match the nav's height (8vh) */
+    overflow: hidden;
+    position: relative;
+}
+
+
+.carousel .list .item{
+    width: 180px;
+    height: 250px;
+    position: absolute;
+    top: 80%;
+    transform: translateY(-70%);
+    left: 70%;
+    border-radius: 20px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    background-position: 50% 50%;
+    background-size: cover;
+    z-index: 100;
+    transition: 1s;
+}
+
+.carousel .list .item:nth-child(1),
+.carousel .list .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel .list .item:nth-child(3){
+    left: 67%;
+}
+
+.carousel .list .item:nth-child(4){
+    left: calc(67% + 200px);
+}
+
+.carousel .list .item:nth-child(5){
+    left: calc(67% + 400px);
+}
+
+.carousel .list .item:nth-child(6){
+    left: calc(67% + 600px);
+}
+
+.carousel .list .item:nth-child(n+7){
+    left: calc(67% + 800px);
+    opacity: 0;
+}
+
+
+
+
+
+.list .item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    transform: translateY(-50%);
+    width: 400px;
+    text-align: left;
+    color: #fff;
+    display: none;
+}
+
+.list .item:nth-child(2) .content{
+    display: block;
+}
+
+
+.content .title{
+    font-size: 100px;
+    text-transform: uppercase;
+    color: #F535AA;
+    font-weight: bold;
+    line-height: 1;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content .name{
+    font-size: 100px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1;
+    color: gold;
+    text-shadow: 3px 4px 4px rgba(255, 215, 0, 0.8);
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    margin-left: 5px;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.9s 1 forwards;
+}
+
+.content .btn{
+    margin-left: 5px;
+
+    opacity: 0;
+    animation: animate 1s ease-in-out 1.2s 1 forwards;
+}
+
+.content .btn button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border: 2px solid #fff;
+}
+
+.content .btn button:nth-child(1){
+    margin-right: 15px;
+}
+
+.content .btn button:nth-child(2){
+    background: transparent;
+    color: #F535AA;
+    border: 2px solid #fff;
+    transition: 0.3s;
+}
+
+.content .btn button:nth-child(2):hover{
+    background-color: #F535AA;
+    color: #fff;
+    border-color: indianred;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+/* Carousel */
+
+
+
+
+
+
+/* next prev arrows */
+
+.arrows{
+    position: absolute;
+    top: 80%;
+    right: 42%; /* adjusts arrows position*/ 
+    z-index: 100;
+    width: 300px;
+    max-width: 30%;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.arrows button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #FF6EC7;
+    color: #ffffff;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-family: monospace;
+    font-weight: bold;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.arrows button:hover{
+    background: #fff;
+    color: #000;
+}
+
+
+/* time running */
+.carousel .timeRunning{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 4px;
+    background-color: #FF6EC7;
+    left: 0;
+    top: 0;
+    animation: runningTime 7s linear 1 forwards;
+}
+
+@keyframes runningTime {
+    
+    from{width: 0%;}
+    to{width: 100%;}
+
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 999px){
+    
+    header{
+        padding-left: 50px;
+    }
+
+    .list .item .content{
+        left: 50px;
+    }
+
+    .content .title, .content .name{
+        font-size: 70px;
+    }
+
+    .content .des{
+        font-size: 16px;
+    }
+
+}
+
+@media screen and (max-width: 690px){
+    header nav a{
+        font-size: 14px;
+        margin-right: 0;
+    }
+
+    .list .item .content{
+        top: 40%;
+    }
+
+    .content .title, .content .name{
+        font-size: 45px;
+    }
+
+    .content .btn button{
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+/****END OF HEADER*****/
+
+
+
+
+
+
+/*products slider*/
+
+.product { 
+position: relative;
+overflow: hidden;
+padding: 20px;
+}
+
+
+.product-category {
+/*   padding: 0 1vw; */
+/*   font-size: 30px;
+  font-weight: 500;
+  margin-bottom:40px;
+  text-transform: capitalize; */
+      color: #000000;
+   
+    font-weight: 700;
+    letter-spacing: .01em;
+    line-height: 28px;
+  margin-bottom: 8px;
+  
+}
+
+.collection p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate (-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+/* For larger screens */
+
+.product-category (min-width: 768px) {
+
+    p {
+
+        font-size: 32px;
+
+    }
+
+}
+
+
+
+/* For smaller screens */
+
+.product-category (max-width: 767px) {
+
+    p {
+
+        font-size: 22px;
+
+    }
+
+} 
+
+
+
+.product-container {
+/*   padding: 0 10vw; */
+  display: flex; 
+  overflow-x: auto;
+  scroll-behavior: smooth;
+}
+
+
+
+.product-container: :-webkit-scrollbar{
+  display: none;
+  
+  
+  
+}
+
+.product-card {
+  flex: 0 0 auto;
+  width:250px;
+  height: 450px;
+  margin-right: 10px
+}
+
+.product-image {
+  position:relative;
+  width: 100%;
+  height: 350px;
+  overflow:hidden;
+}
+
+
+
+.image-hover {
+    width: 100%; /* Specify the width */
+    height: 350px; /* Specify the height */
+  object-fit: cover;
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/moisturizer.jpg?v=1733201805244'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+
+.image-hover:hover {
+    background-image: url('https://cdn.glitch.me/71b52568-f61b-49cb-92d1-327ec066a966/6446053-hd_1080_1920_25fps-ezgif.com-video-to-gif-converter.gif?v=1733282656586');
+
+/* Change on hover */
+}
+
+.image-hover2 {
+    width: 100%; /* Specify the width */
+    height: 350px; /* Specify the height */
+  object-fit: cover;
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/IMG_5478.jpeg?v=1733284145455'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+
+.image-hover2:hover {
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/8129103-uhd_2160_4096_25fps-ezgif.com-video-to-gif-converter.gif?v=1733289382427');
+
+/* Change on hover */
+}
+
+
+.image-hover3 {
+    width: 100%; /* Specify the width */
+    height: 350px; /* Specify the height */
+  object-fit: cover;
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/prd-ls2-797624-600x600.jpg?v=1733290189887'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+
+.image-hover3:hover {
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/6663166-uhd_2160_3744_30fps-ezgif.com-video-to-gif-converter.gif?v=1733290225222');
+
+/* Change on hover */
+}
+
+.image-hover4 {
+    width: 100%; /* Specify the width */
+    height: 350px; /* Specify the height */
+  object-fit: cover;
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/revlon-dotcom-pdp-carousel-image-lip-super-lustrous-lipstick-beauty-delfina-9x16.jpg?v=1733293206812'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+
+.image-hover4:hover {
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/6648853-uhd_2160_4096_25fps-ezgif.com-video-to-gif-converter.gif?v=1733293227287');
+
+/* Change on hover */
+}
+
+.image-hover5 {
+    width: 100%; /* Specify the width */
+    height: 350px; /* Specify the height */
+  object-fit: cover;
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/CP-blue-moon.jpg?v=1733291340906'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+
+.image-hover5:hover {
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/7728287-uhd_2160_3840_30fps-ezgif.com-video-to-gif-converter.gif?v=1733291683801');
+
+/* Change on hover */
+}
+
+.image-hover6 {
+    width: 100%; /* Specify the width */
+    height: 350px; /* Specify the height */
+  object-fit: cover;
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/71v6t6ePYuL.jpg?v=1733293397153'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+
+.image-hover6:hover {
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/6975343-uhd_2160_4096_30fps-ezgif.com-video-to-gif-converter.gif?v=1733293558958');
+
+/* Change on hover */
+}
+
+.image-hover7 {
+    width: 100%; /* Specify the width */
+    height: 350px; /* Specify the height */
+  object-fit: cover;
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/sunkissedblush-glow-recipe-blueberry-bounce-gentle-cleanser-3-of-9.jpg?v=1733293849164'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+
+.image-hover7:hover {
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/8141588-uhd_2160_4096_25fps-ezgif.com-video-to-gif-converter.gif?v=1733294042313');
+
+/* Change on hover */
+}
+
+.image-hover8 {
+    width: 100%; /* Specify the width */
+    height: 350px; /* Specify the height */
+  object-fit: cover;
+    background-image: url('https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/13187374-2134895420964897.jpg?v=1733294406337'); /* Initial background image */
+    background-size: cover; /* Cover the entire area of the element */
+    transition: background-image 0.5s ease-in-out; /* Smooth transition */
+}
+
+
+.image-hover8:hover {
+    background-image: url('https://cdn.glitch.me/71b52568-f61b-49cb-92d1-327ec066a966/16268877-hd_1080_1920_25fps-ezgif.com-video-to-gif-converter.gif?v=1733294944777');
+
+/* Change on hover */
+}
+
+.product-thumb {
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.discount-tag { 
+position: absolute;
+background: #ffffff;
+padding: 5px;
+border-radius: 5px;
+color: #FF4162;
+right:10px;
+top:10px;
+text-transform:capitalize;
+  
+}
+
+
+.card-btn {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+    padding: 10px;
+  width: 90%;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  background: #ffffff;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.card-btn:hover {
+  background: #FF4162;
+  color: #ffffff
+}
+
+.product-card:hover .card-btn {
+  opacity: 1;
+}
+
+.product-info {
+  width: 100%;
+  height: 100%;
+  padding-top:10px;
+}
+
+.product-brand {
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.product-short-description {
+  width: 100%;
+  height: 20px;
+  line-height: 20px;
+  overflow: hidden;
+  text-transform: capitalize;
+  margin: 5px 0;
+  text-decoration: underline;
+  color: black;
+  font-size: 13px;
+
+}
+
+.price {
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.actual-price {
+  margin-left: 20px;
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+
+/* .pre-btn, .nxt-btn {
+  border:none; 
+ 
+  height: 100%;
+  position:absolute;
+  top:0;
+  display: flex;
+  justify-content: center;
+  background: linear-gradient(90deg, (255, 255, 255, 0) 0%, #ffffff 100%);
+  cursor:pointer;
+  z-index: 9;
+}
+
+.pre-btn {
+  left: 0;
+  transform: rotate(180deg);
+}
+
+.nxt-btn{
+  right:0;
+  
+}
+
+.pre-btn img, .nxt-btn img{
+  opacity: 0.2;
+} */
+
+.collection img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* .pre-btn:hover img. .nxt-btn:hover img{
+  opacity:1;
+} */
+
+
+.collection-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat (2, 1fr);
+  grid-gap:10px;
+}
+
+
+.collection {
+  position: relative;
+  
+}
+
+
+/* .collection p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate (-50%, -50%);
+  text-align: center;
+  color: #ffffff;
+  font-size: 50px;
+  text-transform: capitalize;
+} */
+
+.collection:nth-child(3) {
+  grid-column: span 2;
+  margin-bottom: 10px;
+}
+
+
+/*about us button*/
+.aboutus {
+  
+  height: 100%; 
+  border-radius:20%;
+  padding: inherit;
+  margin:auto;
+  width: 90%;
+  display: block;
+  border-style: solid;
+  border-color: black;
+  border-width: 2px;
+  
+  
+}
+
+
+.aboutus img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  
+}
+
+
+
+
+
+/****** SCROLL FEATURE NAVBAR*******/
+html{
+  scroll-behavior: smooth; 
+}
+/*********FOOTER CSS*******/
+/* Footer container styling */
+footer {
+  background-color: #111111; /* Darker black for a more elegant background */
+  color: #FFFFFF; /* White text */
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Footer content layout */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Social icon container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.social-icon:hover {
+  color: #e91e63; /* Pink color on hover */
+  transform: translateY(-5px);
+}
+
+.social-icon i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+
+/* Text next to icons */
+.social-icon span {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover span {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Email Subscription Section */
+.subscribe-section {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.subscribe-section h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #e91e63;
+  border-radius: 25px;
+  background-color: #333;
+  color: #fff;
+  width: 300px;
+  transition: border-color 0.3s ease;
+}
+
+.subscribe-form button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #e91e63; /* Pink button color */
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #d81b60; /* Darker pink on hover */
+  transform: translateY(-3px);
+}
+
+/* Footer text styling */
+footer p {
+  font-size: 14px;
+  color: #bbb;
+  margin-top: 20px;
+}
+
+/* Optional responsiveness: stack icons on smaller screens */
+@media (max-width: 600px) {
+  .social-icons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .social-icon {
+    font-size: 20px;
+  }
+
+  .social-icon i {
+    font-size: 30px;
+  }
+
+  .subscribe-form input[type="email"] {
+    width: 250px;
+  }
+
+  .subscribe-form button {
+    font-size: 14px;
+  }
+}
+
+

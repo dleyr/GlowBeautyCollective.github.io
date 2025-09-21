@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="contact.css">
+</head>
+<body>
+  
+  
+  <nav>
+      <div class="logo">
+        <a href="index.html" class="logo">
+          <img
+            src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/LOGO.png?v=1732427180481"
+            alt="Glow Beauty Collective Logo"
+            width="150"
+          />
+        </a>
+      </div>
+  
+  
+    <div class="container mt-5">
+        <h2 class="text-center">Good News!! We have created a personal plan for you!!</h2>
+        <form onsubmit="redirectToIndex(event)">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Ex. Antonio Moore">
+            </div>
+            <div class="form-group">
+                <label for="number">Phone Number</label>
+                <input type="tel" class="form-control" id="number" placeholder="For Extra Verification">
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Email For Verification">
+            </div>
+            <div class="form-group">
+                <label for="comments">Comments</label>
+                <h6>Once email is verified, we will send you the subscription created for your personal plan</h6>
+                <textarea class="form-control" id="comments" rows="3" placeholder="Anything You Need Us to Know"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Thank You!!</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function redirectToIndex(event) {
+            event.preventDefault();
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+</html>

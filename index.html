@@ -1,0 +1,991 @@
+<!DOCTYPE html> 
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <!---google font--->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <title>Glow Beauty Collective</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+    <!-- Link to Friconix Icons CDN -->
+    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+  </head>
+ <body>
+<!---nav/start of upper part of website---> 
+    <nav>
+          <div class="logo">
+            <a
+              href="index.html"
+              class="logo"
+            >
+              <img
+                src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/LOGO.png?v=1732427180481"
+                alt="Glow Beauty Collective Logo"
+                width="150"
+              />
+            </a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#product">Best Sellers</a></li>
+            <li><a href="skincare.html">Skincare</a></li>
+            <li><a href="cosmetics.html">Cosmetics</a></li>
+            <li><a href="quiz.html">Beauty Quiz</a></li>
+            <li><a href="https://confused-wry-tempo.glitch.me">About Us</a></li>
+          </ul>
+          <div class="cart">
+            <a href="cart.html"><i class="cart-icon">🛒</i></a>
+            <span class="cart-count"></span>
+          </div>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+        
+        <!-- END OF NAVBAR ---->
+<!---HEADER HTML CODE!!!!!!!!!----->
+    <div class="carousel">
+        <div class="list">
+            <div class="item" style="background-image: url(https://cdn.glitch.global/788f3757-4cb3-4b25-88fd-555873d3835f/Wishing%20you%20wellness.png?v=1733377487075);">
+                <div class="content">
+                    <div class="title">Glow Beauty</div>
+                    <div class="name">Box</div>
+                    <div class="des">Glow Beauty Collective’s Personalized Beauty Box delivers eco-friendly, cruelty-free skincare and makeup tailored to you. With natural, vegan ingredients and recyclable packaging, it’s sustainable self-care that’s kind to your skin and the planet.</div>
+                    <div class="btn">
+                        <button>Beauty Quiz</button>
+                       <a href="box.html"><button class="card-btn">Buy Now</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(ignore);">
+                
+                <div class="content">
+                    <div class="title">Glow Beauty </div>
+                    <div class="name">Box</div>
+                    <div class="des">Glow Beauty Collective’s Personalized Beauty Box delivers eco-friendly, cruelty-free skincare and makeup tailored to you. With natural, vegan ingredients and recyclable packaging, it’s sustainable self-care that’s kind to your skin and the planet.</div>
+                    <div class="btn">
+                        <button>Buy Now!</button>
+                        <a href="box.html"><button class="card-btn">Buy Now</button></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(https://cdn.glitch.global/788f3757-4cb3-4b25-88fd-555873d3835f/Watermelon-Family-Lifestyle-1-1.jpg.webp?v=1733377546536);">
+
+                <div class="content">
+                    <div class="title">GLOW</div>
+                    <div class="name">Hydrating Moisturizer </div>
+                    <div class="des">Achieve radiant, hydrated skin with our Glow Moisturizer, enriched with vitamins and natural extracts for a luminous, healthy complexion.</div>
+                    <div class="btn">
+                        <button>Buy Now</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(https://cdn.glitch.global/788f3757-4cb3-4b25-88fd-555873d3835f/SuperGlow_Model.png?v=1733377560213);">
+                
+                <div class="content">
+                    <div class="title">GLOW </div>
+                    <div class="name">Serum</div>
+                    <div class="des">Refresh and brighten your skin with our Glow Cleanser, a gentle formula that removes impurities while boosting your natural radiance.</div>
+                    <div class="btn">
+                        <button>Buy Now</button>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="item" style="background-image: url(https://cdn.glitch.global/788f3757-4cb3-4b25-88fd-555873d3835f/glossier-bodyhero-navigation-body.png.avif?v=1733377575015);">
+                
+                <div class="content">
+                    <div class="title">GLOW</div>
+                    <div class="name">Cleanser</div>
+                    <div class="des">"Reveal your skin’s natural radiance with our Glow Cleanser 🌟—formulated to gently cleanse, hydrate, and leave your complexion luminous and refreshed. Because glowing skin is always in!"</div>
+                    <div class="btn">
+                        <button>Buy Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--next prev button-->
+        <div class="arrows">
+            <button class="prev"><</button>
+            <button class="next">></button>
+        </div>
+       
+    </div>
+      <script src="header.js"></script>
+      <!---come back to ^^^^---> 
+<!-----------END OF HEADER CODE ------>  
+
+    <!--ABOUT US-->
+
+    <div class="about us"></div>
+
+    <!--products -->
+
+    <!-- Swiper -->
+    <section class="product">
+      <section id="product"></section>
+      <h2 class="product-category">GLOW BEAUTY'S BEST SELLING</h2>
+      <!--             <button class="pre-btn">
+        <img
+          src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/arrow.png?v=1733296287721"
+        />
+      </button>
+      <button class="nxt-btn">
+        <img
+          src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/arrow.png?v=1733296287721"
+        />
+      </button> -->
+
+      <div class="product-container">
+        <!--product start 1-->
+        <div class="product-card">
+          <div class="image-hover">
+            <div class="product-image">
+              <span class="discount-tag"> 20% off</span>
+              <a href="product.html"
+                ><button class="card-btn">Buy Now</button></a
+              >
+            </div>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Glow Recipe Hydrating Moisturizer</h2>
+            <p class="product-short-description">Hydrating face moisturizer</p>
+            <span class="price">$32</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+        <!--product end 1-->
+        <!--product start 2-->
+        <div class="product-card">
+          <div class="image-hover2">
+            <div class="product-image">
+              <span class="discount-tag"> 50% off</span>
+              <a href="#"><button class="card-btn">Buy Now</button></a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Glowing Lip Sleeping Mask</h2>
+            <p class="product-short-description">
+              Soothing and softening lip mask
+            </p>
+            <span class="price">$30</span><span class="actual-price">$15</span>
+          </div>
+        </div>
+        <!--product end 2-->
+        <!--product start 3-->
+        <div class="product-card">
+          <div class="image-hover3">
+            <div class="product-image">
+              <span class="discount-tag"> 30% off</span>
+              <a href="#"><button class="card-btn">Buy Now</button></a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Unicorn Glow Foundation</h2>
+            <p class="product-short-description">Smooth and sleek foundation</p>
+            <span class="price">$21</span><span class="actual-price">$30</span>
+          </div>
+        </div>
+        <!--product end 3-->
+        <!--product start 4-->
+        <div class="product-card">
+          <div class="image-hover4">
+            <div class="product-image">
+              <span class="discount-tag"> 10% off</span>
+              <a href="#"><button class="card-btn">Buy Now</button></a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Lusturous Lipstick</h2>
+            <p class="product-short-description">Vibrant and creamy lipstick</p>
+            <span class="price">$27</span><span class="actual-price">$30</span>
+          </div>
+        </div>
+        <!--product end 4-->
+        <!--product start 5-->
+        <div class="product-card">
+          <div class="image-hover8">
+            <div class="product-image">
+              <span class="discount-tag"> 20% off</span>
+              <a href="#"><button class="card-btn">Buy Now</button></a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Golden Illusion Palette</h2>
+            <p class="product-short-description">Warm eyeshadow palette</p>
+            <span class="price">$32</span><span class="actual-price">$40</span>
+          </div>
+        </div>
+
+        <!--product end 5-->
+        <!--product start 6-->
+        <div class="product-card">
+          <div class="image-hover6">
+            <div class="product-image">
+              <a href="#"><button class="card-btn">Buy Now</button></a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Cream Face Mask</h2>
+            <p class="product-short-description">Revitalizing face mask</p>
+            <span class="price">$40</span>
+          </div>
+        </div>
+        <!--product end 6-->
+        <!--product start 7-->
+        <div class="product-card">
+          <div class="image-hover7">
+            <div class="product-image">
+              <span class="discount-tag"> 15% off</span>
+              <a href="#"><button class="card-btn">Buy Now</button></a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Glow Cleanser</h2>
+            <p class="product-short-description">
+              Deep cleansing makeup remover
+            </p>
+            <span class="price">$25.50</span
+            ><span class="actual-price">$30</span>
+          </div>
+        </div>
+        <!--product end 7-->
+        <!--product start 8-->
+        <div class="product-card">
+          <div class="image-hover5">
+            <div class="product-image">
+              <span class="discount-tag"> 20% off</span>
+              <a href="#"><button class="card-btn">Buy Now</button></a>
+            </div>
+          </div>
+          <div class="product-info">
+            <h2 class="product-brand">Blue Moon Palette</h2>
+            <p class="product-short-description">Cool blue eyeshadow palette</p>
+            <span class="price">$24</span><span class="actual-price">$30</span>
+          </div>
+        </div>
+        <!--product end 8-->
+      </div>
+    </section>
+
+      <!--about us button-->
+      
+      <a href="https://confused-wry-tempo.glitch.me"><img class="aboutus" src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/Untitled_Artwork.png?v=1733390060352"></a>
+      
+      
+  
+      
+    <!-- Swiper -->
+    <section class="product">
+      <section id="influencers"></section>
+      <h2 class="product-category">HOT ON SOCIAL</h2>
+      <!--             <button class="pre-btn">
+        <img
+          src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/arrow.png?v=1733296287721"
+        />
+      </button>
+      <button class="nxt-btn">
+        <img
+          src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/arrow.png?v=1733296287721"
+        />
+      </button> -->
+
+      <div class="product-container">
+        <!--product start 1-->
+
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@glowrecipe/video/7316950106643762474"
+          data-video-id="7316950106643762474"
+          style="max-width: 605px; min-width: 325px"
+        >
+          <section>
+            <a
+              target="_blank"
+              title="@glowrecipe"
+              href="https://www.tiktok.com/@glowrecipe?refer=embed"
+              >@glowrecipe</a
+            >
+            We’ve been working really hard to bring you our next refillable
+            product – our oil-free Watermelon Pink Juice Moisturizer! Each
+            refill pod is made up of 95% recycled plastic and filled with
+            oil-free, non-comedogenic, long-lasting hydration 💧
+            <a
+              title="glowrecipe"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowrecipe?refer=embed"
+              >#glowrecipe</a
+            >
+            <a
+              title="refillableskincare"
+              target="_blank"
+              href="https://www.tiktok.com/tag/refillableskincare?refer=embed"
+              >#refillableskincare</a
+            >
+            <a
+              title="watermelonglow"
+              target="_blank"
+              href="https://www.tiktok.com/tag/watermelonglow?refer=embed"
+              >#watermelonglow</a
+            >
+            <a
+              title="viralskincare"
+              target="_blank"
+              href="https://www.tiktok.com/tag/viralskincare?refer=embed"
+              >#viralskincare</a
+            >
+            <a
+              target="_blank"
+              title="♬ Vlog Video work Fashionable BGM(847726) - Tsuyoshi_san"
+              href="https://www.tiktok.com/music/Vlog-Video-work-Fashionable-BGM-847726-6860515009819052033?refer=embed"
+              >♬ Vlog Video work Fashionable BGM(847726) - Tsuyoshi_san</a
+            >
+          </section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+
+        <!--product end 1-->
+        
+        <!--product start 3-->
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@glowrecipe/video/7439485452396268846"
+          data-video-id="7439485452396268846"
+          style="max-width: 605px; min-width: 325px"
+        >
+          <section>
+            <a
+              target="_blank"
+              title="@glowrecipe"
+              href="https://www.tiktok.com/@glowrecipe?refer=embed"
+              >@glowrecipe</a
+            >
+            long flights = major skin hydration station✈️ where are you taking
+            your Glow this holiday season? 👇
+            <a
+              title="inflight"
+              target="_blank"
+              href="https://www.tiktok.com/tag/inflight?refer=embed"
+              >#inflight</a
+            >
+            <a
+              title="airplaneskincare"
+              target="_blank"
+              href="https://www.tiktok.com/tag/airplaneskincare?refer=embed"
+              >#airplaneskincare</a
+            >
+            <a
+              title="travelskincare"
+              target="_blank"
+              href="https://www.tiktok.com/tag/travelskincare?refer=embed"
+              >#travelskincare</a
+            >
+            <a
+              title="glowrecipe"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowrecipe?refer=embed"
+              >#glowrecipe</a
+            >
+            <a
+              title="koreanskincare"
+              target="_blank"
+              href="https://www.tiktok.com/tag/koreanskincare?refer=embed"
+              >#koreanskincare</a
+            >
+            <a
+              title="glowyskin"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowyskin?refer=embed"
+              >#glowyskin</a
+            >
+            <a
+              target="_blank"
+              title="♬ pre-boarding - choppy.wav"
+              href="https://www.tiktok.com/music/pre-boarding-7407977853528098832?refer=embed"
+              >♬ pre-boarding - choppy.wav</a
+            >
+          </section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+        <!--product end 3-->
+        <!--product start 4-->
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@h8myfacelovemyskin/video/7248780340641221930"
+          data-video-id="7248780340641221930"
+          style="max-width: 605px; min-width: 325px"
+        >
+          <section>
+            <a
+              target="_blank"
+              title="@h8myfacelovemyskin"
+              href="https://www.tiktok.com/@h8myfacelovemyskin?refer=embed"
+              >@h8myfacelovemyskin</a
+            >
+            this lip balm is UNDERRATED!!!
+            <a
+              title="glowrecipe"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowrecipe?refer=embed"
+              >#glowrecipe</a
+            >
+            <a
+              title="glowrecipelipbalm"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowrecipelipbalm?refer=embed"
+              >#glowrecipelipbalm</a
+            >
+            <a
+              title="plumplump"
+              target="_blank"
+              href="https://www.tiktok.com/tag/plumplump?refer=embed"
+              >#plumplump</a
+            >
+            <a
+              title="plumplumphyaluronicserum"
+              target="_blank"
+              href="https://www.tiktok.com/tag/plumplumphyaluronicserum?refer=embed"
+              >#plumplumphyaluronicserum</a
+            >
+            <a
+              title="skincare"
+              target="_blank"
+              href="https://www.tiktok.com/tag/skincare?refer=embed"
+              >#skincare</a
+            >
+            <a
+              title="lipbalm"
+              target="_blank"
+              href="https://www.tiktok.com/tag/lipbalm?refer=embed"
+              >#lipbalm</a
+            >
+            <a
+              target="_blank"
+              title="♬ TV Dinners - MJ Lenderman"
+              href="https://www.tiktok.com/music/TV-Dinners-6990302793756248066?refer=embed"
+              >♬ TV Dinners - MJ Lenderman</a
+            >
+          </section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+        <!--product end 4-->
+        <!--product start 5-->
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@onlydahia/video/7384902477210029344"
+          data-video-id="7384902477210029344"
+          style="max-width: 605px; min-width: 325px"
+        >
+          <section>
+            <a
+              target="_blank"
+              title="@onlydahia"
+              href="https://www.tiktok.com/@onlydahia?refer=embed"
+              >@onlydahia</a
+            >
+            currently obsessed with these beautiful lip balms from @glow 🩵✨ you
+            can find them at yesstyle and use code 𝐃𝐀𝐇𝐈𝐀𝟎𝟓 to get a discount on
+            your order 💕 ⓘ no repost or copy allowed • • • • •
+            <a
+              title="kbeauty"
+              target="_blank"
+              href="https://www.tiktok.com/tag/kbeauty?refer=embed"
+              >#kbeauty</a
+            >
+            <a
+              title="koreanmakeup"
+              target="_blank"
+              href="https://www.tiktok.com/tag/koreanmakeup?refer=embed"
+              >#koreanmakeup</a
+            >
+            <a
+              title="koreanskincare"
+              target="_blank"
+              href="https://www.tiktok.com/tag/koreanskincare?refer=embed"
+              >#koreanskincare</a
+            >
+            <a
+              title="koreanbeauty"
+              target="_blank"
+              href="https://www.tiktok.com/tag/koreanbeauty?refer=embed"
+              >#koreanbeauty</a
+            >
+            <a
+              title="skincare"
+              target="_blank"
+              href="https://www.tiktok.com/tag/skincare?refer=embed"
+              >#skincare</a
+            >
+            <a
+              title="makeup"
+              target="_blank"
+              href="https://www.tiktok.com/tag/makeup?refer=embed"
+              >#makeup</a
+            >
+            <a
+              title="lipbalm"
+              target="_blank"
+              href="https://www.tiktok.com/tag/lipbalm?refer=embed"
+              >#lipbalm</a
+            >
+            <a
+              title="koreanlipbalm"
+              target="_blank"
+              href="https://www.tiktok.com/tag/koreanlipbalm?refer=embed"
+              >#koreanlipbalm</a
+            >
+            <a
+              title="lippies"
+              target="_blank"
+              href="https://www.tiktok.com/tag/lippies?refer=embed"
+              >#lippies</a
+            >
+            <a
+              title="glow"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glow?refer=embed"
+              >#glow</a
+            >
+            <a
+              title="glowishere"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowishere?refer=embed"
+              >#glowishere</a
+            >
+            <a
+              title="viralmakeup"
+              target="_blank"
+              href="https://www.tiktok.com/tag/viralmakeup?refer=embed"
+              >#viralmakeup</a
+            >
+            <a
+              target="_blank"
+              title="♬ Supernatural - NewJeans"
+              href="https://www.tiktok.com/music/Supernatural-7382031906434091025?refer=embed"
+              >♬ Supernatural - NewJeans</a
+            >
+          </section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+        <!--product end 5-->
+        <!--product start 6-->
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@laurenilord/video/7262240973416090898"
+          data-video-id="7262240973416090898"
+          style="max-width: 605px; min-width: 325px"
+        >
+          <section>
+            <a
+              target="_blank"
+              title="@laurenilord"
+              href="https://www.tiktok.com/@laurenilord?refer=embed"
+              >@laurenilord</a
+            >
+            Glow Recipe Lip Balm? 🫨🍇 . . Let me know if you have tried this in
+            the comments! —
+            <a
+              title="glowrecipelipbalm"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowrecipelipbalm?refer=embed"
+              >#glowrecipelipbalm</a
+            >
+            <a
+              title="glowrecipenewproduct"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowrecipenewproduct?refer=embed"
+              >#glowrecipenewproduct</a
+            >
+            <a
+              title="glowrecipe"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowrecipe?refer=embed"
+              >#glowrecipe</a
+            >
+            <a
+              title="glowrecipereview"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowrecipereview?refer=embed"
+              >#glowrecipereview</a
+            >
+            <a
+              title="glowrecipeaustralia"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowrecipeaustralia?refer=embed"
+              >#glowrecipeaustralia</a
+            >
+            <a
+              title="laurenlord"
+              target="_blank"
+              href="https://www.tiktok.com/tag/laurenlord?refer=embed"
+              >#laurenlord</a
+            >
+            <a
+              title="mecca"
+              target="_blank"
+              href="https://www.tiktok.com/tag/mecca?refer=embed"
+              >#mecca</a
+            >
+            <a
+              title="meccamax"
+              target="_blank"
+              href="https://www.tiktok.com/tag/meccamax?refer=embed"
+              >#meccamax</a
+            >
+            <a
+              title="laurenlordreview"
+              target="_blank"
+              href="https://www.tiktok.com/tag/laurenlordreview?refer=embed"
+              >#laurenlordreview</a
+            >
+            <a
+              title="laurenlordtiktok"
+              target="_blank"
+              href="https://www.tiktok.com/tag/laurenlordtiktok?refer=embed"
+              >#laurenlordtiktok</a
+            >
+            <a
+              title="laurenlordglowrecipe"
+              target="_blank"
+              href="https://www.tiktok.com/tag/laurenlordglowrecipe?refer=embed"
+              >#laurenlordglowrecipe</a
+            >
+            <a
+              title="laurenlordskincare"
+              target="_blank"
+              href="https://www.tiktok.com/tag/laurenlordskincare?refer=embed"
+              >#laurenlordskincare</a
+            >
+            <a
+              title="review"
+              target="_blank"
+              href="https://www.tiktok.com/tag/review?refer=embed"
+              >#review</a
+            >
+            <a
+              title="trending"
+              target="_blank"
+              href="https://www.tiktok.com/tag/trending?refer=embed"
+              >#trending</a
+            >
+            <a
+              title="trend"
+              target="_blank"
+              href="https://www.tiktok.com/tag/trend?refer=embed"
+              >#trend</a
+            >
+            <a
+              title="viral"
+              target="_blank"
+              href="https://www.tiktok.com/tag/viral?refer=embed"
+              >#viral</a
+            >
+            <a
+              title="fyp"
+              target="_blank"
+              href="https://www.tiktok.com/tag/fyp?refer=embed"
+              >#fyp</a
+            >
+            <a
+              title="foryou"
+              target="_blank"
+              href="https://www.tiktok.com/tag/foryou?refer=embed"
+              >#foryou</a
+            >
+            <a
+              title="foryoupage"
+              target="_blank"
+              href="https://www.tiktok.com/tag/foryoupage?refer=embed"
+              >#foryoupage</a
+            >
+            <a
+              title="lipbalm"
+              target="_blank"
+              href="https://www.tiktok.com/tag/lipbalm?refer=embed"
+              >#lipbalm</a
+            >
+            <a
+              title="worstlipbalm"
+              target="_blank"
+              href="https://www.tiktok.com/tag/worstlipbalm?refer=embed"
+              >#worstlipbalm</a
+            >
+            <a
+              target="_blank"
+              title="♬ original sound - Lauren | Beauty &#38; Skincare"
+              href="https://www.tiktok.com/music/original-sound-7262240990608968449?refer=embed"
+              >♬ original sound - Lauren | Beauty &#38; Skincare</a
+            >
+          </section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+        <!--product end 6-->
+        <!--product start 7-->
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@shannywears/video/7355331788077665537"
+          data-video-id="7355331788077665537"
+          style="max-width: 605px; min-width: 325px"
+        >
+          <section>
+            <a
+              target="_blank"
+              title="@shannywears"
+              href="https://www.tiktok.com/@shannywears?refer=embed"
+              >@shannywears</a
+            >
+            I love all things skin tint and bb cream so I couldn’t wait to try
+            @glow breathable blemish balm 🤍☁️🤍☁️
+            <a
+              title="bbcream"
+              target="_blank"
+              href="https://www.tiktok.com/tag/bbcream?refer=embed"
+              >#bbcream</a
+            >
+            <a
+              title="glowishere"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowishere?refer=embed"
+              >#glowishere</a
+            >
+            <a
+              title="blemishbalm"
+              target="_blank"
+              href="https://www.tiktok.com/tag/blemishbalm?refer=embed"
+              >#blemishbalm</a
+            >
+            <a
+              title="kbeauty"
+              target="_blank"
+              href="https://www.tiktok.com/tag/kbeauty?refer=embed"
+              >#kbeauty</a
+            >
+            <a
+              title="makeupreview"
+              target="_blank"
+              href="https://www.tiktok.com/tag/makeupreview?refer=embed"
+              >#makeupreview</a
+            >
+            <a
+              target="_blank"
+              title="♬ original sound - shanny ౨ৎ"
+              href="https://www.tiktok.com/music/original-sound-7355332847291206417?refer=embed"
+              >♬ original sound - shanny ౨ৎ</a
+            >
+          </section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+        <!--product end 7-->
+        <!--product start 8-->
+        <blockquote
+          class="tiktok-embed"
+          cite="https://www.tiktok.com/@glowishere/video/7323947729519037698"
+          data-video-id="7323947729519037698"
+          style="max-width: 605px; min-width: 325px"
+        >
+          <section>
+            <a
+              target="_blank"
+              title="@glowishere"
+              href="https://www.tiktok.com/@glowishere?refer=embed"
+              >@glowishere</a
+            >
+            had to jump on this 🥹🤫
+            <a
+              title="glow"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glow?refer=embed"
+              >#glow</a
+            >
+            <a
+              title="glowisgood"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowisgood?refer=embed"
+              >#glowisgood</a
+            >
+            <a
+              title="productrecs"
+              target="_blank"
+              href="https://www.tiktok.com/tag/productrecs?refer=embed"
+              >#productrecs</a
+            >
+            <a
+              title="seoul"
+              target="_blank"
+              href="https://www.tiktok.com/tag/seoul?refer=embed"
+              >#seoul</a
+            >
+            <a
+              title="kbeauty"
+              target="_blank"
+              href="https://www.tiktok.com/tag/kbeauty?refer=embed"
+              >#kbeauty</a
+            >
+            <a
+              title="jofromglow"
+              target="_blank"
+              href="https://www.tiktok.com/tag/jofromglow?refer=embed"
+              >#jofromglow</a
+            >
+            <a
+              title="silentreviews"
+              target="_blank"
+              href="https://www.tiktok.com/tag/silentreviews?refer=embed"
+              >#silentreviews</a
+            >
+            <a
+              title="silentreviewmakeupproducts"
+              target="_blank"
+              href="https://www.tiktok.com/tag/silentreviewmakeupproducts?refer=embed"
+              >#silentreviewmakeupproducts</a
+            >
+            <a
+              title="asmrreview"
+              target="_blank"
+              href="https://www.tiktok.com/tag/asmrreview?refer=embed"
+              >#asmrreview</a
+            >
+            <a
+              title="glowproducts"
+              target="_blank"
+              href="https://www.tiktok.com/tag/glowproducts?refer=embed"
+              >#glowproducts</a
+            >
+            <a
+              title="silentreviewstrend"
+              target="_blank"
+              href="https://www.tiktok.com/tag/silentreviewstrend?refer=embed"
+              >#silentreviewstrend</a
+            >
+            <a
+              target="_blank"
+              title="♬ original sound  - glow"
+              href="https://www.tiktok.com/music/original-sound-glow-7323948007425182466?refer=embed"
+              >♬ original sound - glow</a
+            >
+          </section>
+        </blockquote>
+        <script async src="https://www.tiktok.com/embed.js"></script>
+        <!--product end 8-->
+      </div>
+    </section>
+
+    <!--end of products-->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="https://instagram.com" target="_blank" class="social-icon">
+            <i class="fi-xnsuxl-instagram"></i>
+            <span>@glowbeautycollective</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="social-icon">
+            <i class="fi-xnsuxl-twitter-solid"></i>
+            <span>GBCollective</span>
+          </a>
+          <a href="https://gmail.com" target="_blank" class="social-icon">
+            <i class="fi-xwsuxl-envelope-solid"></i>
+            <span>info@glowbeautycollective.com</span>
+          </a>
+          <a href="https://googlemaps.com" target="_blank" class="social-icon">
+            <i class="fi-xnluxl-building"></i>
+            <span>234 Radiance Blvd., Fashion District, USA 10010</span>
+          </a>
+        </div>
+
+        <!-- Email Subscription Form -->
+        <div class="subscribe-section">
+    <h3>Subscribe to Our Newsletter and get 15% off your next order!</h3>
+    <form action="#" method="post" class="subscribe-form" id="subscribeForm">
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        />
+        <button type="submit">Subscribe</button>
+    </form>
+</div>
+
+<p>By submitting this form, I confirm I am a US resident and (1) agree to Glow Beauty Collective’s Terms of Use (which includes an arbitration provision) and Marketing Disclosure; and (2) have read and acknowledge Glow Beauty Collective’s Privacy Notice and Notice of Financial Incentives.
+
+© 2024 Glow Beauty Collective. All rights reserved.</p>
+  
+
+<script>
+    // Handle form submission
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent default form submission
+        
+        // Simulate a form submission success
+        alert("Thanks for subscribing! You will be redirected.");
+
+        // Redirect to signup.html after submission
+        window.location.href = "signup.html";  // Redirect to signup page
+    });
+</script>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+            <!----HEADER JAVASCRIPT ----> 
+       <script src="header.js" defer></script>
+      
+      
+  </body>
+</html>

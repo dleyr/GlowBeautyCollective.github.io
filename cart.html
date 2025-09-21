@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+  <link rel="stylesheet" href="style.css"> 
+    <style>
+        body {
+            font-family: Poppins, sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #ffb6c1, #ffa07a);
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ff69b4;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            animation: slideDown 0.8s ease-out;
+        }
+
+        @keyframes slideDown {
+            from {
+                transform: translateY(-20px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .cart {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            border: 2px solid #ff69b4;
+            border-radius: 10px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .cart-item:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .cart-item img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+            animation: popIn 0.5s ease;
+        }
+
+        @keyframes popIn {
+            from {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-details h3 {
+            margin: 0 0 10px;
+            color: #000;
+        }
+
+        .cart-item-details p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        .cart-item-details .price {
+            color: #ff69b4;
+            font-weight: bold;
+        }
+
+        .cart-item-details .quantity {
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .cart-item-details .quantity span {
+            margin-right: 10px;
+        }
+
+        .remove-btn {
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .remove-btn:hover {
+            background-color: #e0589c;
+        }
+
+        .checkout-btn {
+            display: block;
+            margin: 30px auto 0;
+            padding: 15px 30px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background-color: #333;
+            transform: scale(1.1);
+        }
+
+        .total-price {
+            text-align: right;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+  <!---nav/start of upper part of website---> 
+    <nav>
+          <div class="logo">
+            <a
+              href="index.html"
+              class="logo"
+            >
+              <img
+                src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/LOGO.png?v=1732427180481"
+                alt="Glow Beauty Collective Logo"
+                width="150"
+              />
+            </a>
+          </div>
+          <ul class="nav-links">
+            <li><a href="#product">Best Sellers</a></li>
+            <li><a href="skincare.html">Skincare</a></li>
+            <li><a href="cosmetics.html">Cosmetics</a></li>
+            <li><a href="quiz.html">Beauty Quiz</a></li>
+            <li><a href="https://confused-wry-tempo.glitch.me">About Us</a></li>
+          </ul>
+          <div class="cart">
+            <a href="cart.html"><i class="cart-icon">🛒</i></a>
+            <span class="cart-count">0</span>
+          </div>
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+        
+        <!-- END OF NAVBAR ---->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    <div class="container">
+        <div class="header">
+            <h1>Your Cart</h1>
+        </div>
+        <div class="cart">
+            <!-- Product 1 -->
+            <div class="cart-item" id="product-1">
+                <img src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/Screenshot%202024-12-04%2010.23.36%20AM.png?v=1733336809485" alt="Product 1">
+                <div class="cart-item-details">
+                    <h3>Glow Hydrating Moisturizer</h3>
+                    <p>Glow Beauty’s Glow Recipe Hydrating Moisturizer hydrates and refreshes with hyaluronic acid, vitamin E, and botanicals, leaving skin soft, glowing, and revitalized. Perfect for daily use.</p>
+                    <p class="price">Price: $32.00</p>
+                    <div class="quantity">
+                        <span>Quantity:</span>
+                        <input type="number" value="1" min="1" onchange="updateTotal()" data-price="32" class="quantity-input">
+                    </div>
+                </div>
+                <button class="remove-btn" onclick="removeItem('product-1')">Remove</button>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="cart-item" id="product-2">
+                <img src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/51q4yMB00ZL.jpg?v=1733888638120" alt="Product 2">
+                <div class="cart-item-details">
+                    <h3>Luminous Glow Highlighter</h3>
+                    <p>Elevate your beauty routine with the Luminous Glow Highlighter – the perfect touch for radiant, glowing skin.</p>
+                    <p class="price">Price: $25.00</p>
+                    <div class="quantity">
+                        <span>Quantity:</span>
+                        <input type="number" value="1" min="1" onchange="updateTotal()" data-price="25" class="quantity-input">
+                    </div>
+                </div>
+                <button class="remove-btn" onclick="removeItem('product-2')">Remove</button>
+            </div>
+        </div>
+        <div class="total-price">Total: $57.00</div>
+        <button class="checkout-btn" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+
+    <script>
+        function removeItem(itemId) {
+            const item = document.getElementById(itemId);
+            if (item) {
+                item.remove();
+                updateTotal();
+                alert('Item removed from cart!');
+            }
+        }
+
+        function updateTotal() {
+            const quantityInputs = document.querySelectorAll('.quantity-input');
+            let total = 0;
+            quantityInputs.forEach(input => {
+                const price = parseFloat(input.getAttribute('data-price'));
+                const quantity = parseInt(input.value);
+                total += price * quantity;
+            });
+            document.querySelector('.total-price').textContent = `Total: $${total.toFixed(2)}`;
+        }
+
+        function checkout() {
+            alert('Proceeding to checkout!');
+        }
+    </script>
+  
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="https://instagram.com" target="_blank" class="social-icon">
+            <i class="fi-xnsuxl-instagram"></i>
+            <span>@glowbeautycollective</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="social-icon">
+            <i class="fi-xnsuxl-twitter-solid"></i>
+            <span>GBCollective</span>
+          </a>
+          <a href="https://gmail.com" target="_blank" class="social-icon">
+            <i class="fi-xwsuxl-envelope-solid"></i>
+            <span>info@glowbeautycollective.com</span>
+          </a>
+          <a href="https://googlemaps.com" target="_blank" class="social-icon">
+            <i class="fi-xnluxl-building"></i>
+            <span>234 Radiance Blvd., Fashion District, USA 10010</span>
+          </a>
+        </div>
+
+        <!-- Email Subscription Form -->
+        <div class="subscribe-section">
+    <h3>Subscribe to Our Newsletter and get 15% off your next order!</h3>
+    <form action="#" method="post" class="subscribe-form" id="subscribeForm">
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+        />
+        <button type="submit">Subscribe</button>
+    </form>
+</div>
+
+<p>By submitting this form, you agree to receive promotional emails.</p>
+  
+
+<script>
+    // Handle form submission
+    document.getElementById('subscribeForm').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent default form submission
+        
+        // Simulate a form submission success
+        alert("Thanks for subscribing! You will be redirected.");
+
+        // Redirect to signup.html after submission
+        window.location.href = "signup.html";  // Redirect to signup page
+    });
+</script>
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+</body>
+</html>

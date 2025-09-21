@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <!---google font--->
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <title>Glow Beauty Collective</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- The website JavaScript file -->
+    <script src="/script.js" defer></script>
+    <!-- Link to Friconix Icons CDN -->
+    <script defer src="https://friconix.com/cdn/friconix.js"></script>
+  </head>
+
+  <!---nav/start of upper part of website--->
+  <nav>
+    <div class="logo">
+      <a href="https://group1-glowbeautycollective.glitch.me/" class="logo">
+        <img
+          src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/LOGO.png?v=1732427180481"
+          alt="Glow Beauty Collective Logo"
+          width="150"
+        />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#product">Best Sellers</a></li>
+      <li><a href="skincare.html">Skincare</a></li>
+      <li><a href="cosmetics.html">Cosmetics</a></li>
+      <li><a href="quiz.html">Beauty Quiz</a></li>
+      <li><a href="https://confused-wry-tempo.glitch.me">About Us</a></li>
+    </ul>
+    <div class="cart">
+      <i class="cart-icon">🛒</i>
+      <span class="cart-count"></span>
+    </div>
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
+  </nav>
+  <!--welcome-->
+
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+    body {
+      font-family: "Poppins", sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* logo*/
+    .logo {
+      display: flex;
+      width: 200px;
+      height: 100px;
+    }
+    .logo img {
+      display: block;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      margin: auto;
+      transform: scale(150%); /*adjust size of logo img*/
+    }
+
+    /* Navigation Bar */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 8vh;
+      background-color: ivory;
+      padding: 0 2rem;
+      position: fixed; /* Fix the navbar at the top */
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000; /* Ensure it appears above other elements */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    }
+
+    /* Navigation Links */
+    .nav-links {
+      display: flex;
+      justify-content: space-around; /* Distribute links evenly */
+      align-items: center;
+      list-style: none;
+      transition: transform 0.5s ease-in-out;
+      flex-grow: 1; /* Ensure it takes up available space */
+    }
+
+    .nav-links li {
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: pink;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      font-weight: bold;
+      font-size: 14px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ff1493; /* Slightly brighter pink on hover */
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    .cart-icon {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: #ff99cc;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-icon span {
+      font-size: 14px;
+      margin-left: 5px;
+    }
+  </style>
+
+  <!-- END OF NAVBAR ---->
+
+  <!-- Search Bar -->
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Glow Beauty Box</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Roboto", sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+      }
+      header {
+        background-color: #fec5e5;
+        padding: 20px;
+        text-align: center;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+        color: #b35900;
+      }
+      .hero {
+        height: 700px;
+        width: auto;
+
+        background: url("https://cdn.glitch.global/fc4eab63-997f-441c-a5e2-24f3eded36c7/subbox1.png?v=1733977873278")
+          no-repeat center/cover;
+        padding: 100px 100px;
+        text-align: left;
+        color: #fec5e5;
+      }
+      .hero h2 {
+        font-size: 2.2em;
+        margin-bottom: 10px;
+      }
+      .hero p {
+        font-size: 1.2em;
+      }
+      .cta-button {
+        display: inline-block;
+        background-color: #fec5e5;
+        color: black;
+        padding: 15px 30px;
+        margin-top: 20px;
+        text-decoration: none;
+        font-size: 1.2em;
+        border-radius: 5px;
+      }
+      .cta-button:hover {
+        background-color: #AA336A;
+      }
+      .features {
+        background-color: #fec5e5;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 40px;
+        justify-content: center;
+        bbackground-color: #fec5e5;
+      }
+      .feature {
+        background-color: #fff5e6;
+        border: 1px solid #ffd9b3;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        flex: 1 1 calc(33% - 40px);
+        max-width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .feature img {
+        width: 250px;
+        height: 270px;
+        margin-bottom: 15px;
+      }
+      .feature h3 {
+        font-size: 1.5em;
+        margin-bottom: 10px;
+      }
+      footer {
+        background-color: #ffe0b3;
+        padding: 20px;
+        text-align: center;
+        color: #b35900;
+      }
+      .features h1 {
+        text-align: center;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      footer {
+  background-color: #111111; /* Darker black for a more elegant background */
+  color: #FFFFFF; /* White text */
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Footer content layout */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Social icon container */
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.social-icon:hover {
+  color: #e91e63; /* Pink color on hover */
+  transform: translateY(-5px);
+}
+
+.social-icon i {
+  font-size: 24px;
+  margin-right: 8px;
+}
+/* Text next to icons */
+.social-icon span {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  opacity: 0.8;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover span {
+  opacity: 1;
+  transform: translateX(5px);
+}
+
+/* Email Subscription Section */
+.subscribe-section {
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.subscribe-section h3 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.subscribe-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 12px;
+  font-size: 16px;
+  border: 2px solid #e91e63;
+  border-radius: 25px;
+  background-color: #333;
+  color: #fff;
+  width: 300px;
+  transition: border-color 0.3s ease;
+}
+
+.subscribe-form button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #e91e63; /* Pink button color */
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.subscribe-form button:hover {
+  background-color: #d81b60; /* Darker pink on hover */
+  transform: translateY(-3px);
+}
+
+/* Footer text styling */
+footer p {
+  font-size: 14px;
+  color: #bbb;
+  margin-top: 20px;
+}
+
+/* Optional responsiveness: stack icons on smaller screens */
+@media (max-width: 600px) {
+  .social-icons {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .social-icon {
+    font-size: 20px;
+  }
+
+  .social-icon i {
+    font-size: 30px;
+  }
+
+  .subscribe-form input[type="email"] {
+    width: 250px;
+  }
+
+  .subscribe-form button {
+    font-size: 14px;
+  }
+}
+.icons-container{
+  background:white;
+  display:flex;
+  flex-wrap:wrap;
+  gap:1.5rem;
+  padding-top: 5rem;
+  padding-bottom:5rem;
+}
+
+.icons-container .icons{
+  background: #ree;
+  border:.2rem solid rgba(255,215,0); 
+  padding: 2rem; 
+  display:flex;
+  align-items: center;
+  flex:1 1 25rem;
+}
+.icons-container .icons img{
+  height:5rem;
+  margin-right:2rem;
+}
+.icons-container .icons h3{
+  color:#333;
+  padding-bottom: .5rem;
+  font-size: 1.5rem;
+}
+.icons-container .icons span{
+  color:#333;
+  padding-bottom: .5rem;
+}
+      .img{
+  width: auto/5;
+  height:auto/5;
+  object-fit:cover;
+  margin-bottom:70px;
+display: block;
+margin-left: auto;
+margin-right: auto;
+  width:100%;
+}
+    </style>
+  </head>
+  <body>
+    <section class="hero">
+      
+     <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <h2>Your Monthly Dose of Glow</h2>
+      <h2>Starting at $36/month!</h2>
+      <p>Discover beauty products curated just for you.</p>
+      <a href="https://group1-glowbeautycollective.glitch.me/quiz.html" class="cta-button">Subscribe and Take the Quiz Now!</a>
+    </section>
+
+    <section class="features">
+      <h1>WHY US?</h1>
+      <br />
+      <div class="feature">
+        <img
+          src="https://cdn-cf.ipsy.com/_next/image?url=https://cdn-cf.ipsy.com/contentAsset/image/bba34d8b-12e1-4935-9f8f-25ef1a5d8db0/fileAsset?byInode=1&w=640&q=75"
+          alt="Custom Picks"
+        />
+        <h3>Custom Picks</h3>
+        <p>Personalized selections tailored to your beauty preferences.</p>
+      </div>
+      <div class="feature">
+        <img
+          src="https://cdn-cf.ipsy.com/_next/image?url=https://cdn-cf.ipsy.com/contentAsset/image/ba0d3cb6-5d09-4783-bb6d-c73838a346c3/fileAsset?byInode=1&w=640&q=75"
+        />
+        <h3>Premium Brands</h3>
+        <p>Experience luxury with high-end beauty products.</p>
+      </div>
+      <div class="feature">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZnvr18c56Lt9QMS2N7y0JIlQNuXWK1aNd_g&s"
+          alt="Great Value"
+        />
+        <h3>Save the Environment</h3>
+        <p>Our products are eco-friendly and cruelty free.</p>
+      </div>
+    </section>
+<img class="img"
+src="https://cdn.glitch.global/71b52568-f61b-49cb-92d1-327ec066a966/Screenshot%202024-12-12%20at%2012.08.08%E2%80%AFAM.png?v=1733990937267"/>
+ 
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <section id="team" class="team text-center">
+          <!--goals-->
+          <br />
+          <h1>HOW IT WORKS</h1>
+          <br />
+          <!--Bootstrap Grid System: 2x2 layout-->
+          <div class="row justify-content-center">
+            <!--First member-->
+            <div class="col-md-5 mb-4">
+              <img
+                src="https://cdn-cf.ipsy.com/contentAsset/image/d0f62624-fbc5-4f68-8529-4ea6ecb75259/fileAsset?byInode=1"
+                class="img-fluid"
+                alt="Jennie Kim"
+                style="width: 300px; height: 300px"
+              />
+              <h3>1. Become a Member</h3>
+
+              <p>
+                Join and get full-size products from the most buzzworthy brands,
+                starting at just $30/month!
+              </p>
+            </div>
+            <!--Second member-->
+            <div class="col-md-5 mb-4">
+              <img
+                src="https://cdn-cf.ipsy.com/contentAsset/image/4f8fccbe-b19a-4cfe-99ea-156bf000d3c5/fileAsset?byInode=1"
+                class="img-fluid"
+                alt="John Doe"
+                style="width: 300px; height: 300px"
+              />
+              <h3>Complete the Beauty Quiz</h3>
+
+              <p>
+                Get more of what you love by taking our Beauty Quiz. Your
+                answers guide what goes into your box.
+              </p>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <!--Third member-->
+            <div class="col-md-5 mb-4">
+              <img
+                src="https://cdn-cf.ipsy.com/contentAsset/image/5aab2ee3-bf37-4d12-a7bd-036764875d4e/fileAsset?byInode=1"
+                class="img-fluid"
+                alt="Winwin"
+                style="width: 300px; height: 300px"
+              />
+              <h3>Shop Our Online Stores</h3>
+
+              <p>
+                Enjoy 24/7 insider access to unbeatable deals on the hottest
+                brands in beauty.
+              </p>
+            </div>
+            <!--Fourth member-->
+            <div class="col-md-5 mb-4">
+              <img
+                src="https://cdn-cf.ipsy.com/contentAsset/image/ac7050cb-e0e7-4c1f-ac34-42dd5c805c0a/fileAsset?byInode=1"
+                class="img-fluid"
+                alt="Winwin"
+                style="width: 300px; height: 300px"
+              />
+              <h3>Shipment</h3>
+
+              <p>Now you wait for your package to arrive at your door!</p>
+            </div>
+          </div>
+        </section>
+      </body>
+    </html>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="footer-content">
+        <div class="social-icons">
+          <a href="https://instagram.com" target="_blank" class="social-icon">
+            <i class="fi-xnsuxl-instagram"></i>
+            <span>@glowbeautycollective</span>
+          </a>
+          <a href="https://twitter.com" target="_blank" class="social-icon">
+            <i class="fi-xnsuxl-twitter-solid"></i>
+            <span>GBCollective</span>
+          </a>
+          <a href="https://gmail.com" target="_blank" class="social-icon">
+            <i class="fi-xwsuxl-envelope-solid"></i>
+            <span>info@glowbeautycollective.com</span>
+          </a>
+          <a href="https://googlemaps.com" target="_blank" class="social-icon">
+            <i class="fi-xnluxl-building"></i>
+            <span>234 Radiance Blvd., Fashion District, USA 10010</span>
+          </a>
+        </div>
+
+        <!-- Email Subscription Form -->
+        <div class="subscribe-section">
+          <h3>Subscribe to Our Newsletter and for 15% off your next order!</h3>
+          <form action="#" method="post" class="subscribe-form">
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              required
+            />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+        <p>
+          By submitting this form, I confirm I am a US resident and (1) agree to
+          Glow Beauty Collective’s Terms of Use (which includes an arbitration
+          provision) and Marketing Disclosure; and (2) have read and acknowledge
+          Glow Beauty Collective’s Privacy Notice and Notice of Financial
+          Incentives.
+        </p>
+        <p>&copy; 2024 Glow Beauty Collective. All rights reserved.</p>
+      </div>
+    </footer>
+    <!----HEADER JAVASCRIPT ---->
+    <script src="header.js" defer></script>
+  
+</html>
